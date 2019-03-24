@@ -12,7 +12,7 @@ This repository contains general development guidance on developing the project.
 
 The services are proxied by kong as router, load balancer and authentication layer. All the services will be deployed through Docker and Kubernetes implementation. The services are:
 
-- Kong: uses cassandra
+- Kong: as Orchestration Microservice API Gateway, uses cassandra
 - Product: uses Spring-Java and mysql (may use GRPC for between-microservice communication later on)
 - User: uses Nodejs and MongoDb (may use GRPC for between-microservice communication later on)
   `tutorial: https://codeburst.io/writing-a-crud-app-with-node-js-and-mongodb-e0827cbbdafb`
