@@ -6,6 +6,16 @@ const port = 3000
 app.use(logger())
 
 app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/users/:id', (req, res) =>
+  res.json({
+    user: {
+      username: 'username from api',
+      name: 'name from api',
+      profile_pic_path:
+        'https://en.wikipedia.org/wiki/Steve_Jobs#/media/File:Steve_Jobs_Headshot_2010-CROP2.jpg',
+    },
+  })
+)
 app.get('/products', (req, res) =>
   res.json({
     products: [
